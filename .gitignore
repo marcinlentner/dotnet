@@ -1,0 +1,16 @@
+**/bin/
+**/obj/
+**/*.user
+**/*.suo
+**/*.cache
+**/*.dll
+**/*.exe
+**/*.pdb
+**/*.pidb
+.vs/
+packages/
+*.log
+*.bak
+*.swp
+*.swo
+.DS_Store
