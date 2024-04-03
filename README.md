@@ -1,2 +1,2 @@
-# dotnetd
+# dotnet
 Small C# .NET programs.
