@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Gradebook
 {
@@ -51,6 +52,24 @@ namespace Gradebook
         gradesTotal += grade;
       }
       Console.WriteLine($"Grades Total: {gradesTotal}.");
+
+      // Lists
+      List<double> studentGrades = new List<double>();
+      studentGrades.Add(4.7);
+      studentGrades.Add(5.1);
+      studentGrades.Add(3.9);
+
+      double studentGradesTotal = 0.0;
+
+      foreach (var grade in studentGrades)
+      {
+        studentGradesTotal += grade;
+      }
+
+      double studentGradesAverage = studentGradesTotal / studentGrades.Count;
+
+      Console.WriteLine($"Student Grades Total: {studentGradesTotal:N1}"); // formatting
+      Console.WriteLine($"Student Grades Average: {studentGradesAverage:N1}");
     }
   }
 }
