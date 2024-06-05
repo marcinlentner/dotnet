@@ -21,16 +21,31 @@ namespace Gradebook
       grades.Add(3.9);
 
       double gradesTotal = 0.0;
+      double highGrade = double.MinValue;
+      double lowGrade = double.MaxValue;
 
       foreach (var grade in grades)
       {
+        if (grade > highGrade)
+
+        // compute highest grad
+        {
+          highGrade = grade;
+        }
+
+        // compute total used for calculating average grade
         gradesTotal += grade;
+
+        // compute lowest grade
+        lowGrade = Math.Min(grade, lowGrade);
       }
 
       double gradesAverage = gradesTotal / grades.Count;
 
-      //Console.WriteLine($"Student Grades Total: {gradesTotal:N1}"); // formatting
-      //Console.WriteLine($"Student Grades Average: {gradesAverage:N1}");
+      Console.WriteLine($"Student Highest Grade: {highGrade:N1}");
+      Console.WriteLine($"Student Lowest Grade: {lowGrade:N1}");
+      Console.WriteLine($"Student Grades Average: {gradesAverage:N1}");
+
     }
   }
 }
